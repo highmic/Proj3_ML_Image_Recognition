@@ -7,12 +7,12 @@ from predict import predict_new
 # Create an instance of Flask
 app = Flask(__name__)
 
-filepath = "images/Dog.jpeg"
+image_new = "images/Dog.jpeg"
 
 # print("---------------> FLASK < --------------")
 @app.route("/", methods=["GET", "POST"])
 def home():
-        labels = predict_new(filepath)
+        labels = predict_new(image_new)
         label = labels[0]
         return render_template('index.html', message = label)
 if __name__ == "__main__":
