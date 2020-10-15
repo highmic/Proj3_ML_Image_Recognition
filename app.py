@@ -1,3 +1,6 @@
+import os
+import sys
+
 from flask import Flask, render_template, redirect, request
 from predict import predict_new
 
