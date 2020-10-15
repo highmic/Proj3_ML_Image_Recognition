@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 filepath = "images/Dog.jpeg"
 
-print("---------------> FLASK < --------------")
+# print("---------------> FLASK < --------------")
 @app.route("/", methods=["GET", "POST"])
 def home():
         labels = predict_new(filepath)
